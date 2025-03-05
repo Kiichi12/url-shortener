@@ -7,9 +7,11 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
+    const BACKEND_URL = "https://your-backend.onrender.com";
+
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+            const response = await axios.post(`${BACKEND_URL}/api/url/shorten`, { url });
             if (response.status === 200) {
                 navigate('/url-shortener');
             }

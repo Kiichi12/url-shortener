@@ -9,13 +9,15 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const navigate = useNavigate();
 
+    const BACKEND_URL = "https://your-backend.onrender.com";
+
     const handleRegister = async () => {
         if (password !== confirmPassword) {
             alert('Passwords do not match');
             return;
         }
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/register', { username, email, password });
+            const response = await axios.post(`${BACKEND_URL}/api/url/shorten`, { url });
             if (response.status === 201) {
                 navigate('/url-shortener');
             }

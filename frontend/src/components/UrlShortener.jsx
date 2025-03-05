@@ -1,18 +1,30 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
+
 const UrlShortener = () => {
     const [url, setUrl] = useState('');
     const [shortUrl, setShortUrl] = useState('');
+    
+    const BACKEND_URL = "https://your-backend.onrender.com";
 
     const handleShorten = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/api/url/shorten', { url });
+            const response = await axios.post(`${BACKEND_URL}/api/url/shorten`, { url });
             setShortUrl(response.data.short_url);
         } catch (error) {
             alert('Failed to shorten URL');
         }
     };
+    // const handleShorten = async () => {
+    //     try {
+    //         const response = await axios.post('http://localhost:5000/api/url/shorten', { url });
+    //         setShortUrl(response.data.short_url);
+    //     } catch (error) {
+    //         alert('Failed to shorten URL');
+    //     }
+    // };
 
     return (
         <div>
