@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
-from routes/auth_routes import auth
-from routes/url_routes import url
+from routes.auth_routes import auth
+from routes.url_routes import url
 
 app = Flask(__name__)
 CORS(app)
