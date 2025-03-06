@@ -9,7 +9,11 @@ CORS(app)
 
 app.register_blueprint(auth, url_prefix='/api/auth')
 app.register_blueprint(url, url_prefix='/api/url')
+
 @app.route("/")
+def home():
+    return "Hello, this is my URL Shortener!"
+    
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # Use PORT environment variable or default to 5000
     app.run(host='0.0.0.0', port=port)
