@@ -17,7 +17,7 @@ const Register = () => {
             return;
         }
         try {
-            const response = await axios.post(`${BACKEND_URL}/api/url/shorten`, { url });
+            const response = await axios.post(`${BACKEND_URL}/api/auth, { url });
             if (response.status === 201) {
                 navigate('/url-shortener');
             }
