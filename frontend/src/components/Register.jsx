@@ -9,7 +9,7 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const navigate = useNavigate();
 
-    const BACKEND_URL = "https://your-backend.onrender.com";
+    const BACKEND_URL = "https://url-shortener-7kd0.onrender.com";
 
     const handleRegister = async () => {
         if (password !== confirmPassword) {
