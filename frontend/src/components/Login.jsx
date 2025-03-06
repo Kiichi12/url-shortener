@@ -11,7 +11,7 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post(`${BACKEND_URL}/api/url/shorten`, { url });
+            const response = await axios.post(`${BACKEND_URL}/api/auth, { url });
             if (response.status === 200) {
                 navigate('/url-shortener');
             }
