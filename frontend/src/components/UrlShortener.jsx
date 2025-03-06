@@ -7,7 +7,7 @@ const UrlShortener = () => {
     const [url, setUrl] = useState('');
     const [shortUrl, setShortUrl] = useState('');
     
-    const BACKEND_URL = "https://your-backend.onrender.com";
+    const BACKEND_URL = "https://url-shortener-7kd0.onrender.com/";
 
     const handleShorten = async () => {
         try {
