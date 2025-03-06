@@ -11,7 +11,7 @@ const UrlShortener = () => {
 
     const handleShorten = async () => {
         try {
-            const response = await axios.post(`${BACKEND_URL}/api/url/shorten`, { url });
+            const response = await axios.post(`${BACKEND_URL}/api/url, { url });
             setShortUrl(response.data.short_url);
         } catch (error) {
             alert('Failed to shorten URL');
